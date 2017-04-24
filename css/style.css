@@ -1,19 +1,13 @@
 .parent {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: auto;
+	top: 0;
+	left: 0;
+	overflow: auto;
 }
 
 .block {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -125px 0 0 -125px;
+    height: auto;
+	margin-top: 50px;
     
     #registr_team {
         max-width: 100%;
@@ -24,26 +18,46 @@
     }
 }
 #registr_team {
-	width: 300px;
-	height: 160px;
-	border: 1px solid;
-	border-color: rgba(191,153,0,.8);
-	border-radius: 3px;
-	background-color: #ffdb4d;
-	cursor: pointer;
+	width: 100%;
 	text-align: center;
+	cursor: pointer;
+}
+#register_teams {
+	width: 75%;
+	text-align: center;
+	background-color: #00FF7F;
+	border: none;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 13px;
+	font-size: 15px;
+	border: 1px solid #fff;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	transition: all 1s;
+	opacity: 0.8;
 }
 #registr_team input {
-	margin: 5px;
-	padding: 5px 17px;
-	border-style: none;
-	color: #333;
-	line-height: 1.3;
-	text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
-	width: 85%;
-	box-shadow: none;
-	font-size: 20px;
-	border-radius: 3px;
+	width: 70%;
+	text-align: center;
+	background-color: #fff67a;
+	border: none;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 13px;
+	font-size: 15px;
+	border: 1px solid #fff;
+	-webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -ms-transition: all 1s;
+    transition: all 1s;
+}
+#registr_team input:hover {
+	background-color: #eaeac0;
+	border: 1px solid green;
 }
 #begin_game {
 	cursor: pointer;
@@ -71,8 +85,6 @@ body {
 }
 #hi_teams {
 	text-align: center;
-	background-color: #ffdb4d;
-	padding: 150px;
 }
 #continue_game {
 	cursor: pointer;

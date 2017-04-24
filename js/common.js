@@ -66,10 +66,10 @@
       if (time == 0) {
         $('#game_body').hide('slow');
         $('#continue_game').show('slow');
-        if (window.second_team.point >= 30) {
+        if (window.first_team.point >= 30) {
           alert('Победила первая команда!');
         }
-        if (window.first_team.point >= 30) {
+        if (window.second_team.point >= 30) {
           alert('Победила вторая команда!');
         }
       }
