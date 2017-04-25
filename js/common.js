@@ -227,6 +227,7 @@
       $(this).css({
         'opacity': '0',
       });
+      $(this).prop('disabled',true);
       if (get_cookie('team') == '2') {
         window.second_team.point = window.second_team.point + 1;
         $('#point_second_team').text(window.second_team.point);
