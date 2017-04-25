@@ -23,14 +23,14 @@
 	cursor: pointer;
 }
 #register_teams {
-	width: 75%;
+	width: 79%;
 	text-align: center;
 	background-color: #00FF7F;
 	border: none;
-	padding: 10px;
+	padding: 14px;
 	margin-top: 10px;
 	border-radius: 13px;
-	font-size: 15px;
+	font-size: 40px;
 	border: 1px solid #fff;
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
@@ -38,22 +38,23 @@
 	-ms-transition: all 1s;
 	transition: all 1s;
 	opacity: 0.8;
+	cursor: pointer;
 }
 #registr_team input {
 	width: 70%;
 	text-align: center;
 	background-color: #fff67a;
 	border: none;
-	padding: 10px;
+	padding: 21px;
 	margin-top: 10px;
 	border-radius: 13px;
-	font-size: 15px;
+	font-size: 35px;
 	border: 1px solid #fff;
 	-webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    -ms-transition: all 1s;
-    transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	-ms-transition: all 1s;
+	transition: all 1s;
 }
 #registr_team input:hover {
 	background-color: #eaeac0;
@@ -61,6 +62,10 @@
 }
 #begin_game {
 	cursor: pointer;
+	background-color: #ffbd4d;
+	font-size: 50px;
+	padding: 15px;
+	border-radius: 10px;
 }
 
 
@@ -77,6 +82,13 @@ body {
 	-khtml-user-select: none;
 -webkit-user-select: none;
 }
+button {
+	cursor: pointer;
+	background-color: #ffbd4d;
+	font-size: 50px;
+	padding: 15px;
+	border-radius: 10px;
+}
 .teams {
 	width: 100%;
 	background-color: #3c3c3c;
@@ -87,26 +99,41 @@ body {
 	width: 33.3333333333%;
 	text-align: center;
 	color: #fff;
+	-moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
 }
 #hi_teams {
 	text-align: center;
 }
 #continue_game {
 	cursor: pointer;
-	font-size: 30px;
+	background-color: #ffbd4d;
+	font-size: 50px;
+	padding: 15px;
+	border-radius: 10px;
+	display: block;
 }
 .word-item {
   text-align: center;
-  display: block;
-  width: 50%;
-  float: left;
-  font-size: 25px;
-  padding-top: 5px;
-  margin: 0px;
-  background-color: #ffdb4d;
-  color: #fff;
-  padding-bottom: 5px;
-  cursor: pointer;
+	display: block;
+	width: 50%;
+	float: left;
+	font-size: 25px;
+	padding-top: 9px;
+	margin: 0px;
+	background-color: #ffdb4d;
+	color: #fff;
+	padding-bottom: 9px;
+	cursor: pointer;
+	border-radius: 8px;
+	border: solid 2px #ffefa2;
+	opacity: 1;
+	-moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .word-item:hover {
 	background-color: #ffdb2d;
@@ -123,4 +150,15 @@ body {
 	color: #fff;
 	padding-bottom: 5px;
 	cursor: pointer;
+}
+.active-team {
+	background-color: #ffbd4d;
+}
+.points {
+	width: 100%;
+	float: left;
+}
+.points h2 {
+	margin-top: 2px;
+	margin-bottom: 2px;
 }

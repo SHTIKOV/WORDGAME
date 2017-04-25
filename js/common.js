@@ -1,4 +1,5 @@
 (function() {
+
   function set_cookie( name, value, exp_y, exp_m, exp_d, path, domain, secure ) {
     var cookie_string = name + "=" + escape ( value );
    
@@ -29,6 +30,7 @@
   }
   /* -BEGIN- функция регистрации комманд */
   function register_teams() {
+    $('.teams').show('slow');
     $('#name_first_team').append( $('#first_team').val() );
     $('#name_second_team').append( $('#second_team').val() );
     $('#name_first_team').show('slow');
@@ -42,7 +44,11 @@
 
   /* -BEGIN- функция начала игры */
   function begin_first_team_game() {
-    alert('Играет первая команда');
+    var time = 30;
+
+    $('.word-item').removeAttr('style');
+    $('.teams .second-team').removeClass('active-team');
+    $('.teams .first-team').addClass('active-team');
     set_cookie('team', '1');
     get_random_word();
     $('#timer').show('slow');
@@ -50,8 +56,7 @@
     $('#begin_game').hide('slow');
     $('#continue_game').hide('slow');
     $('#hi_teams').hide('slow');
-
-    var time = 30;
+    
     var button = document.getElementById('timer');
     button.disabled = true;
     button.innerHTML = time;
@@ -67,16 +72,20 @@
         $('#game_body').hide('slow');
         $('#continue_game').show('slow');
         if (window.first_team.point >= 30) {
-          alert('Победила первая команда!');
+          $('body').html('<h1>Победила первая команда!</h1><button onclick="location.reload();">Играть снова</button>');
         }
         if (window.second_team.point >= 30) {
-          alert('Победила вторая команда!');
+          $('body').html('<h1>Победила вторая команда!</h1><button onclick="location.reload();">Играть снова</button>');
         }
       }
     }, 1000);
   }
   function begin_second_team_game() {
-    alert('Играет вторая команда');
+    var time = 30;
+
+    $('.word-item').removeAttr('style');
+    $('.teams .first-team').removeClass('active-team');
+    $('.teams .second-team').addClass('active-team');
     set_cookie('team', '2');
     get_random_word();
     $('#timer').show('slow');
@@ -85,7 +94,6 @@
     $('#continue_game').hide('slow');
     $('#hi_teams').hide('slow');
 
-    var time = 30;
     var button = document.getElementById('timer');
     button.disabled = true;
     button.innerHTML = time;
@@ -101,11 +109,11 @@
         $('#game_body').hide('slow');
         $('#continue_game').show('slow');
         if (window.second_team.point >= 30) {
-          alert('Победила первая команда!');
+          $('body').html('<h1>Победила вторая команда!</h1><button onclick="location.reload();">Играть снова</button>')
 
         }
         if (window.first_team.point >= 30) {
-          alert('Победила вторая команда!');
+          $('body').html('<h1>Победила первая команда!</h1><button onclick="location.reload();">Играть снова</button>')
         }
       }
     }, 1000);
@@ -176,6 +184,7 @@
 
   $( document ).ready(function() {
     /* -BEGIN- скрываем все не нужные элементы при загрузке страницы */
+    $('.teams').hide();
     $('#hi_teams').hide();
     $('#name_first_team').hide();
     $('#name_second_team').hide();
@@ -216,8 +225,7 @@
     });
     $( ".word-item" ).click(function() {
       $(this).css({
-        'background-color': '#3c3c',
-        'pointer-events': 'none',
+        'opacity': '0',
       });
       if (get_cookie('team') == '2') {
         window.second_team.point = window.second_team.point + 1;
@@ -229,11 +237,5 @@
       }
     });
     /* -END- при клике на кнопку начало игры */
-    $( ".second-team" ).click(function() {
-      alert('У второй команды ' + window.second_team.point + ' очков.');
-    });
-    $( ".first-team" ).click(function() {
-      alert('У второй команды ' + window.second_team.point + ' очков.');
-    });
   });
 })();
