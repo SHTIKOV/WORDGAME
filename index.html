@@ -73,7 +73,15 @@
 			<button type="button" id="item-19" class="word-item"></button>
 			<button type="button" id="item-20" class="word-item"></button>
 		</div>
-
+<div id="p_prldr"><div class="contpre"><span class="svg_anm"></span><br>Подождите<br><small>идет загрузка</small></div></div>
  		<script src="js/common.js"></script>
+ 		<script type="text/javascript">
+	 		$(window).on('load', function () {
+			    var $preloader = $('#p_prldr'),
+			        $svg_anm   = $preloader.find('.svg_anm');
+			    $svg_anm.fadeOut();
+			    $preloader.delay(500).fadeOut('slow');
+			});
+		</script>
  	</body>
 </html>
