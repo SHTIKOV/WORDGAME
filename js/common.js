@@ -46,6 +46,7 @@
   function begin_first_team_game() {
     var time = 30;
 
+    $('.word-item').removeAttr('disabled');
     $('.word-item').removeAttr('style');
     $('.teams .second-team').removeClass('active-team');
     $('.teams .first-team').addClass('active-team');
@@ -83,6 +84,7 @@
   function begin_second_team_game() {
     var time = 30;
 
+    $('.word-item').removeAttr('disabled');
     $('.word-item').removeAttr('style');
     $('.teams .first-team').removeClass('active-team');
     $('.teams .second-team').addClass('active-team');
